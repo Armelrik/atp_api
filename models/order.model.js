@@ -7,10 +7,33 @@ const orderSchema = new Schema(
       type: String,
       required: true,
     },
-    email: {
+    img: {
+      type: String,
+      required: false,
+    },
+    title: {
       type: String,
       required: true,
-      unique: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    sellerId: {
+      type: String,
+      required: true,
+    },
+    buyerId: {
+      type: String,
+      required: true,
+    },
+    isCompleted: {
+      type: Boolean,
+      default: false,
+    },
+    payment_intent: {
+      type: String,
+      required: true,
     },
   },
   {

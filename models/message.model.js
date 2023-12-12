@@ -3,15 +3,17 @@ const { Schema } = mongoose;
 
 const messageSchema = new Schema(
   {
-    username: {
+    conversationId: {
       type: String,
       required: true,
-      unique: true,
     },
-    email: {
+    userId: {
       type: String,
       required: true,
-      unique: true,
+    },
+    desc: {
+      type: String,
+      required: true,
     },
   },
   {
