@@ -1,9 +1,8 @@
 import express from "express";
+import { deleteUser } from "../controls/user.control.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get("/register")
-router.get("/login")
-
+router.delete("/delete:id", deleteUser);
 
 export default router;
